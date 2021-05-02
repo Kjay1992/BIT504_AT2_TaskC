@@ -131,6 +131,7 @@
                    checkWallBounce();           // Check for wall bounce
                    checkPaddleBounce();			// Check for paddle bounce
                    checkWin();					//Check if the game has been won
+                   
                    break;
                }
                case GameOver: {
@@ -206,6 +207,7 @@
                paintSprite(g, paddle1);
                paintSprite(g, paddle2);
                paintScores(g);
+               paintWinner(g);
    
            }
        }
