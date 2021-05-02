@@ -13,8 +13,8 @@ public class Sprite {
 	 // Getter methods
 	 public int getXPosition() {return xPosition;}
 	 public int getYPosition() {return yPosition;}
-	 public int getxVelocity() {return xVelocity;}
-	 public int getyVelocity() {return yVelocity;}
+	 public int getXVelocity() {return xVelocity;}
+	 public int getYVelocity() {return yVelocity;}
 	 public int getWidth() {return width;}
 	 public int getHeight() {return height;}
 	 public Color getColour() {return colour;}
@@ -28,11 +28,11 @@ public class Sprite {
 	         this.yPosition = yPosition;
 	     }
 	 
-	 public void setxVelocity(int xVelocity) {
+	 public void setXVelocity(int xVelocity) {
 	         this.xVelocity = xVelocity;
 	     }
 	 
-	 public void setyVelocity(int yVelocity) {
+	 public void setYVelocity(int yVelocity) {
 	         this.yVelocity = yVelocity;
 	     }
 	 
