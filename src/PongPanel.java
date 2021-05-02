@@ -4,12 +4,26 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
+import javax.swing.Timer;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
 
 	public final static Color BACKGROUND_COLOR = Color.black;
+	private final static int TIMER_DELAY = 5;
+	
 	public PongPanel() {
 		setBackground(BACKGROUND_COLOR);
+		Timer timer = new Timer(TIMER_DELAY, this);
+		timer.start();
+	}
+	
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.setColor(Color.WHITE);
+		g.fillRect(20, 20, 100, 100);
 	}
 	
 	@Override
@@ -30,9 +44,13 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 		
 	}
 
+	private void update() {
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		// TODO Auto-generated method stub
+		update();
 		
 	}
 
