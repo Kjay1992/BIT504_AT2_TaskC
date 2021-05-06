@@ -13,9 +13,9 @@
    
   public class PongPanel extends JPanel implements ActionListener, KeyListener {
        
-       private final static Color BACKGROUND_COLOUR = Color.WHITE;
+       private final static Color BACKGROUND_COLOUR = Color.BLACK;
        private final static int TIMER_DELAY = 5;
-       private final static int BALL_MOVEMENT_SPEED = 2;
+       private final static int BALL_MOVEMENT_SPEED = 7;
        private final static int POINTS_TO_WIN = 3;
        private final static int SCORE_TEXT_X = 100;
        private final static int SCORE_TEXT_Y = 100;
@@ -144,7 +144,7 @@
           Graphics2D g2d = (Graphics2D) g.create();
               Stroke dashed = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{9}, 0);
               g2d.setStroke(dashed);
-              g2d.setPaint(Color.BLACK);
+              g2d.setPaint(Color.RED);
               g2d.drawLine(getWidth() / 2, 0, getWidth() / 2, getHeight());
               g2d.dispose();
        }
@@ -157,24 +157,24 @@
        @Override
        public void keyPressed(KeyEvent event) {
     	   if (event.getKeyCode() == KeyEvent.VK_W) {
-    		   paddle1.setYVelocity(-1);
+    		   paddle1.setYVelocity(-4);
     	   } else if (event.getKeyCode() == KeyEvent.VK_S) {
-    		   paddle1.setYVelocity(1);
+    		   paddle1.setYVelocity(4);
     	   }
     	   if (event.getKeyCode() == KeyEvent.VK_UP) {
-    		   paddle2.setYVelocity(-1);
+    		   paddle2.setYVelocity(-4);
     	   } else if (event.getKeyCode() == KeyEvent.VK_DOWN) {
-    		   paddle2.setYVelocity(1);
+    		   paddle2.setYVelocity(4);
     	   }
        }
    
        @Override
        public void keyReleased(KeyEvent event) {
     	   if(event.getKeyCode() == KeyEvent.VK_W || event.getKeyCode() == KeyEvent.VK_S) {
-               paddle1.setYVelocity(0);
+               paddle1.setYVelocity(1);//goes down
            }
            if(event.getKeyCode() == KeyEvent.VK_UP || event.getKeyCode() == KeyEvent.VK_DOWN) {
-               paddle2.setYVelocity(0);
+               paddle2.setYVelocity(1);// goes down
            }
        }
    
