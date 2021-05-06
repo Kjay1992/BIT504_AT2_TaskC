@@ -159,12 +159,12 @@
     	   if (event.getKeyCode() == KeyEvent.VK_W) {
     		   paddle1.setYVelocity(-4);
     	   } else if (event.getKeyCode() == KeyEvent.VK_S) {
-    		   paddle1.setYVelocity(4);
+    		   paddle1.setYVelocity(0);// pressing down disables
     	   }
     	   if (event.getKeyCode() == KeyEvent.VK_UP) {
     		   paddle2.setYVelocity(-4);
     	   } else if (event.getKeyCode() == KeyEvent.VK_DOWN) {
-    		   paddle2.setYVelocity(4);
+    		   paddle2.setYVelocity(0);// pressing down disables
     	   }
        }
    
